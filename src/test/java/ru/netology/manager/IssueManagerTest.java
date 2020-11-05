@@ -53,14 +53,12 @@ class IssueManagerTest {
     assertEquals(expected, actual);
   }
 
-
   @Test
   void shouldFilterByAuthor() {
     List<Issue> actual = issueManager.filterByAuthor(new Author(4, "name4", "surname4"), comparator);
     List<Issue> expected = Arrays.asList(issue6);
     assertEquals(expected, actual);
   }
-
 
   @Test
   void shouldNotFilterByAuthor() {
